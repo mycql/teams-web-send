@@ -16,7 +16,7 @@
 		"serve": "browser-sync 'dist' 'resource' -w",
     "start": "npm run watch & npm run serve",
     "test": "tsdx test --coverage",
-    "lint": "tsdx lint",
+    "lint": "tsdx lint src",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
