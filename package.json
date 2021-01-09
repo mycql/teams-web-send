@@ -35,7 +35,15 @@
     "trailingComma": "es5"
   },
   "name": "teams-web-send",
-  "author": "Christopher Luna",
+	"author": "Christopher Luna",
+	"description": "Post messages to Microsoft Teams directly from the browser!",
+	"keywords": [
+    "microsoft teams",
+		"incoming webhook",
+		"alert",
+		"page",
+		"notification"
+  ],
   "module": "dist/tws.esm.js",
   "size-limit": [
     {
