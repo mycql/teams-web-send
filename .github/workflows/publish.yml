@@ -4,25 +4,25 @@ on:
     types: [created]
 jobs:
   publish:
+		name: Builld, lint, test and publish
     runs-on: ubuntu-latest
     steps:
-		- name: Checkout repo
-      uses: actions/checkout@v2
-    # Setup .npmrc file to publish to npm
-		- name: Use Node 14.x
-    	uses: actions/setup-node@v1
-      with:
-        node-version: '14.x'
-        registry-url: 'https://registry.npmjs.org'
-		- name: Install deps and build (with cache)
-      uses: bahmutov/npm-install@v1
-    - name: Lint
-			run: npm run lint
-		- name: Test
-			run: npm run test --ci --maxWorkers=2
-		- name: Build
-			run: npm run build
-		- name: Publish
-    	run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+			- name: Checkout repo
+				uses: actions/checkout@v2
+			- name: Use Node 14.x
+				uses: actions/setup-node@v1
+				with:
+					node-version: '14.x'
+					registry-url: 'https://registry.npmjs.org'
+			- name: Install deps and build (with cache)
+				uses: bahmutov/npm-install@v1
+			- name: Lint
+				run: npm run lint
+			- name: Test
+				run: npm run test --ci --maxWorkers=2
+			- name: Build
+				run: npm run build
+			- name: Publish
+				run: npm publish
+				env:
+					NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
