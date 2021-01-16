@@ -37,7 +37,7 @@ sendMessage('http://your.msteams.webhook.url', message);
 
 * Directly off the browser as a UMD
 ```html
-<script src="https://unpkg.com/teams-web-send@0.1.0/dist/tws.umd.production.min.js"></script>
+<script src="https://unpkg.com/teams-web-send@0.1.1/dist/tws.umd.production.min.js"></script>
 <script>
 (() => {
 	const sendMessage = window.tws.bootstrap();
