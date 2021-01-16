@@ -19,8 +19,6 @@ jobs:
         run: npm run lint
       - name: Test
         run: npm run test --ci --maxWorkers=2
-      - name: Build
-        run: npm run build
       - name: Publish
         run: npm publish
         env:
